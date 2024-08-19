@@ -1,0 +1,25 @@
+---
+import Badge from "./Badge.astro";
+import GitHub from "../icons/GitHub.astro";
+import SocialPill from "../icons/SocialPill.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+---
+
+<section class="flex items-center justify-between flex-row w-[800px] h-[350px]">
+  <section>
+    <div class="flex flex-row"><h1>Hi 👋,</h1></div>
+    <h1>My name is</h1>
+    <h1 style="color: #ff6d7f">Roberto Wong</h1>
+    <h1>I build solutions.</h1>
+    <nav class="flex flex-row gap-x-4">
+      <SocialPill href="https://github.com/tycowong"
+        ><GitHub class="h-6 w-6" />GitHub</SocialPill
+      >
+      <SocialPill href="https://www.linkedin.com/in/roberto-wong-3847571b2/"
+        ><LinkedIn class="h-6 w-6" />LinkedIn</SocialPill
+      >
+    </nav>
+  </section>
+
+  <img src="https://unavatar.io/github/tycowong" class="rounded-full size-72" />
+</section>
