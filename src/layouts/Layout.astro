@@ -11,6 +11,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
@@ -42,10 +43,12 @@ const { title } = Astro.props;
     align-items: center;
     margin: 0 auto;
     row-gap: 80px;
+    width: 100%;
   }
 
   body {
     background-color: #f3f7fe;
+    width: 100%;
   }
 
   h1 {
