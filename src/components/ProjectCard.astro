@@ -1,0 +1,16 @@
+---
+const { projectName, description } = Astro.props;
+---
+
+<section
+  class="flex shadow-gray-400 shadow-2xl flex-col w-[258px] h-[400px] bg-white rounded-xl hover:scale-110 hover:shadow-red-300 transition"
+>
+  <img
+    class="size-fit rounded-t-xl"
+    src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg"
+  />
+  <div class="p-3">
+    <h2 class="mb-2">{projectName}</h2>
+    <h3>{description}</h3>
+  </div>
+</section>
