@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
 import BriefCaseIcon from "../icons/BriefCaseIcon.astro";
+import SocialPill from "../icons/SocialPill.astro";
+import DocumentIcon from "../icons/DocumentIcon.astro";
 ---
 
 <Layout
@@ -18,14 +20,27 @@ import BriefCaseIcon from "../icons/BriefCaseIcon.astro";
     >
       <Hero /></SectionContainer
     >
-    <SectionContainer class="md:w-[850px] flex-col justify-start gap-y-10">
+
+    <SectionContainer
+      id="career"
+      class="md:w-[850px] flex-col justify-start gap-y-10"
+    >
       <div class="flex flex-row items-center justify-start gap-x-3">
         <BriefCaseIcon class="size-9" />
         <h1>Career</h1>
       </div>
+      <nav class="flex flex-row mt-[-35px] mb-5">
+        <SocialPill
+          href="https://docs.google.com/document/d/1O9P1Azw82MKqqrXMcaMWUasmLonc3Q6qTRIIsBkHu4c/export?format=pdf"
+          ><DocumentIcon />Download Resume</SocialPill
+        >
+      </nav>
       <Experience />
     </SectionContainer>
-    <Projects />
+
+    <SectionContainer class="flex justify-center flex-col items-center">
+      <Projects />
+    </SectionContainer>
     <Footer />
   </main>
 </Layout>
