@@ -2,8 +2,6 @@
 const { class: className } = Astro.props;
 ---
 
-<section
-  class=`flex justify-center flex-col items-center md:w-[1000px] w-[400px] ${className}`
->
+<section class=`flex md:w-[1000px] w-[400px] ${className}`>
   <slot />
 </section>

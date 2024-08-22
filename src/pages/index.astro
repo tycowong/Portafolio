@@ -3,11 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import BriefCaseIcon from "../icons/BriefCaseIcon.astro";
 ---
 
 <Layout title="Roberto Wong">
   <main>
-    <Hero />
+    <SectionContainer
+      class="flex items-center flex-col justify-between p-1 mt-10 gap-y-10 md:flex-row md:w-[850px] w-[400px] md:h-[350px]"
+    >
+      <Hero /></SectionContainer
+    >
+    <SectionContainer class="md:w-[850px] flex-col justify-start gap-y-10">
+      <div class="flex flex-row items-center justify-start gap-x-3">
+        <BriefCaseIcon class="size-9" />
+        <h1>Carrer</h1>
+      </div>
+      <Experience />
+    </SectionContainer>
     <Projects />
     <Footer />
   </main>
