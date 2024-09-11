@@ -1,24 +1,36 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+
+const PROJECTS = [
+  {
+    photoUrl:
+      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
+    projectName: "Test 1",
+    description: "This is testing 1",
+  },
+  {
+    photoUrl:
+      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
+    projectName: "Test 2",
+    description: "Thios is testing 2",
+  },
+  {
+    photoUrl:
+      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
+    projectName: "Test 3",
+    description: "This is testing 3",
+  },
+  {
+    photoUrl:
+      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
+    projectName: "Test 4",
+    description: "This is testing 4",
+  },
+];
 ---
 
 <h1>Projects</h1>
 <h2>What I've build so far</h2>
 <div class="flex flex-row flex-wrap m-10 align-center justify-center gap-8">
-  <ProjectCard
-    projectName="Project Title"
-    description="Here type a really short description, remember KISS."
-  />
-  <ProjectCard
-    projectName="Project Title"
-    description="Here type a really short description, remember KISS."
-  />
-  <ProjectCard
-    projectName="Project Title"
-    description="Here type a really short description, remember KISS."
-  />
-  <ProjectCard
-    projectName="Project Title"
-    description="Here type a really short description, remember KISS."
-  />
+  {PROJECTS.map((project) => <ProjectCard {...project} />)}
 </div>

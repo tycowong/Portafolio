@@ -1,8 +1,65 @@
-<header class="flex justify-center w-full py-4">
-  <nav class="flex justify-between w-[350px] flex-row gap-3">
+<header class="fixed top-0 z-10 flex justify-center w-full py-4">
+  <nav
+    class="flex justify-between w-[350px] flex-row gap-3 px-3 text-sm font-medium rounded-full items-center"
+  >
     <a href="#career">Career</a>
     <a href="#projects">Projects</a>
     <a href="#about">About Me</a>
     <a href="#contact">Contact Me</a>
   </nav>
 </header>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-yellow-500");
+            } else {
+              item.classList.remove("text-yellow-500");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+  });
+</script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-sm ring-1 font-bold bg-slate-300/20 dark:bg-gray-800/80 shadow-md shadow-red-300/50 border-gray-900 border-[1px] ring-white/10;
+    }
+  }
+</style>

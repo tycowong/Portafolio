@@ -25,20 +25,25 @@ import DocumentIcon from "../icons/DocumentIcon.astro";
       id="career"
       class="md:w-[850px] flex-col justify-start gap-y-10"
     >
-      <div class="flex flex-row items-center justify-start gap-x-3">
-        <BriefCaseIcon class="size-9" />
-        <h1>Career</h1>
+      <div class="flex flex-row gap-x-3 justify-between items-center">
+        <div class="flex flex-row items-center justify-start gap-x-3">
+          <BriefCaseIcon class="size-10" />
+          <h1>Career</h1>
+        </div>
+        <nav class="flex flex-row md:mr-11">
+          <SocialPill
+            href="https://docs.google.com/document/d/1O9P1Azw82MKqqrXMcaMWUasmLonc3Q6qTRIIsBkHu4c/export?format=pdf"
+            ><DocumentIcon class="size-6" />Download Resume</SocialPill
+          >
+        </nav>
       </div>
-      <nav class="flex flex-row mt-[-35px] mb-5">
-        <SocialPill
-          href="https://docs.google.com/document/d/1O9P1Azw82MKqqrXMcaMWUasmLonc3Q6qTRIIsBkHu4c/export?format=pdf"
-          ><DocumentIcon />Download Resume</SocialPill
-        >
-      </nav>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer class="flex justify-center flex-col items-center">
+    <SectionContainer
+      id="projects"
+      class="flex justify-center flex-col items-center"
+    >
       <Projects />
     </SectionContainer>
     <Footer />
