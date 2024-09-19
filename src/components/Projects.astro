@@ -1,32 +1,9 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 
-const PROJECTS = [
-  {
-    photoUrl:
-      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
-    projectName: "Test 1",
-    description: "This is testing 1",
-  },
-  {
-    photoUrl:
-      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
-    projectName: "Test 2",
-    description: "Thios is testing 2",
-  },
-  {
-    photoUrl:
-      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
-    projectName: "Test 3",
-    description: "This is testing 3",
-  },
-  {
-    photoUrl:
-      "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg",
-    projectName: "Test 4",
-    description: "This is testing 4",
-  },
-];
+import projects from "../projects/projects.json";
+
+const PROJECTS = projects.project;
 ---
 
 <h1>Projects</h1>

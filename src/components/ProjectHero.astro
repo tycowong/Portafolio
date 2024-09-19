@@ -1,0 +1,16 @@
+---
+interface Props {
+  source: string;
+  alt: string;
+  transitionName: string;
+}
+
+const { source, alt, transitionName } = Astro.props;
+---
+
+<img
+  src=`${source}`
+  alt=`${alt}`
+  class="w-[548px] h-[360px] rounded-md"
+  transition:name=`${transitionName}`
+/>
