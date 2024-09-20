@@ -1,14 +1,14 @@
 {
     "project": [
         {
-            "photoUrl": "../src/projects/images/3rsT_image.jpg" ,
+            "photoUrl": "src/projects/images/3rsT_image.jpg" ,
             "projectName": "3rsT",
             "description": "This app recomends a drink based on what you are currently listening in Spotify.",
             "pageUrl": "/3rsT/",
             "transitionName": "3rsTImage"
         },
         {
-            "photoUrl": "../src/projects/images/Emmy_Mua_Portafolio_Hero.jpg",
+            "photoUrl": "src/projects/images/Emmy_Mua_Portafolio_Hero.jpg",
             "projectName": "Emmy Marron Portafolio",
             "description": "This portafolio was created just using HTML and CSS",
             "pageUrl": "/EmmyMarron/",
