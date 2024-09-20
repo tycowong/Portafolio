@@ -3,6 +3,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import ProjectHero from "../components/ProjectHero.astro";
 import ProjectInfo from "../components/ProjectInfo.astro";
+const photoUrl = "/src/projects/images/3rsT_image.jpg";
 ---
 
 <Layout description="3rsT Project" title="3rsT">
@@ -11,8 +12,8 @@ import ProjectInfo from "../components/ProjectInfo.astro";
     <SectionContainer class="h-full gap-8">
       <ProjectHero
         transitionName="3rsTImage"
-        source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP4AAACPCAMAAADtNpYHAAAAUVBMVEWJiYn///+GhoaDg4Ofn5+AgICPj4/5+fmSkpLCwsLLy8v19fWsrKy4uLiVlZW9vb3u7u55eXnX19fn5+elpaWysrLh4eHR0dFoaGhxcXFjY2PLTd68AAACfUlEQVR4nO3c24qkMBAG4FTlZBJzNNGZff8H3dgsLMyyczct6P9hQ9v0RZWplFFQIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN6Ka2Vd9dVhXEQvLVhbhuarI7mCjEQ2WKLdXB3KBeRKtik2zlKTQp4bn5/57dw7/yFvXBY6UGMpWDtbpIkrr07J7rxbhYnDnMcn9tvmz4pCPweZ05rmzu4t+RjIks0yUNSiBhvl1WH+FJ1pMzx7f/38/JzpW9qOeQTGstpgMu1CJirLbUdfe9qENLPzzcylIspaclLVrIVUJTuqp71eHeWP0YOKkilMdKYfEgs2edY+kZqlcdRA/ba1L3ghOye4Sia+Rr/M9E2jbfSNlFxsiSHceUFUNyqrrjXtr9HfEnO3VtQlUNLsqNBx5/RZWQq7b6WEv+lT7vNotFX3OSXSbRvfSaoy+x6VUUj2V/GLNvc3T+Q1HxTu2/heWC8jzkI3c41zfuYPKncthZkXQ47cfRvfH/x1Xfta8s66UPP0d+/a/8Y8580JcHUUl5HRuWieOvjntd6tr/bghfnr9hi8mLnk5bklxSmJpMSirg7qbbgfrmeffFzjYXzuzq3Z3ff+xhfS+6PnQx2zybfl8NH54Y54dVhv05wbsYl1pn105bNb3eLHU0afuzImD/ads+O8yuFMfM7gC3mu8aXQLLQWr5u8Qt9+lQ8AAAAAAAAAAAAAAAAAAAAAAADwHlJXre/85Nm3eOxl2+//9NH/tI+x/GpPfBHBiZ1rPranjj67cRzrY9M/i79/PLb45Siz9eWntn5uNabHvoJHsO9ePeVRjH+xcutTJ/6J8dglAAA82W+YlRaCVajGrAAAAABJRU5ErkJggg=="
-        alt="Gray color"
+        source=`${photoUrl}`
+        alt="3rsT isometric design"
       />
 
       <ProjectInfo

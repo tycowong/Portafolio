@@ -1,4 +1,6 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 interface Props {
   source: string;
   alt: string;
@@ -6,10 +8,19 @@ interface Props {
 }
 
 const { source, alt, transitionName } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/projects/images/*.{jpeg,jpg,png,gif}"
+);
+
+if (!images[source])
+  throw new Error(
+    `"${source}" does not exist in glob: "/src/projects/images/*.{jpeg,jpg,png,gif}"`
+  );
 ---
 
-<img
-  src=`${source}`
+<Image
+  src={images[source]()}
   alt=`${alt}`
   class="w-[548px] h-[360px] rounded-md"
   transition:name=`${transitionName}`
