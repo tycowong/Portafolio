@@ -2,8 +2,6 @@
 import ProjectCard from "./ProjectCard.astro";
 import { getCollection } from "astro:content";
 const PROJECTS = await getCollection("projects");
-
-console.log(PROJECTS);
 ---
 
 <h1>Projects</h1>
@@ -12,15 +10,18 @@ console.log(PROJECTS);
   {
     PROJECTS.map((project: { slug: any; data: any }) => {
       const { slug, data } = project;
+      console.log(slug);
       const { name, img, sm_description } = data;
 
       return (
-        <ProjectCard
-          slug={slug}
-          name={name}
-          img={img}
-          sm_description={sm_description}
-        />
+        <a href={`/projects/${slug}`}>
+          <ProjectCard
+            slug={slug}
+            name={name}
+            img={img}
+            sm_description={sm_description}
+          />
+        </a>
       );
     })
   }

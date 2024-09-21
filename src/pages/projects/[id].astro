@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import ProjectHero from "../../components/ProjectHero.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import ProjectInfo from "../../components/ProjectInfo.astro";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { id: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { data } = project;
+const { name, img, sm_description } = data;
+
+const { Content } = await render(project);
+---
+
+<Layout title=`${name}` description=`${name} Project`>
+  <section
+    class="flex gap-5 w-full h-full flex-row justify-center flex-wrap mt-14"
+  >
+    <ProjectHero img={img} alt="Yolo" />
+    <article class="prose prose-md pl-11 pr-11 mt-4">
+      <h1>{name}</h1>
+      <Content />
+    </article>
+  </section>
+</Layout>

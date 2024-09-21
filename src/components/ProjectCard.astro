@@ -10,23 +10,19 @@ interface Props {
   expo?: boolean;
 }
 const { name, img, sm_description, react, astro, tailwind, expo } = Astro.props;
-
-console.log(name);
 ---
 
-<a href=`/projects/${img}`>
-  <section
-    class="flex shadow-gray-400 shadow-2xl flex-col w-[400px] h-[400px] bg-white rounded-xl hover:scale-110 hover:shadow-red-300 transition duration-500 ease-in-out"
-  >
-    <img
-      transition:name=`img-${img}`
-      class="size-fit rounded-t-xl"
-      alt="yolo"
-      src=`images/${img}`
-    />
-    <div class="p-3">
-      <h2 class="mb-2">{name}</h2>
-      <h3>{sm_description}</h3>
-    </div>
-  </section>
-</a>
+<section
+  class="flex shadow-gray-400 shadow-2xl flex-col w-[400px] h-[400px] bg-white rounded-xl hover:scale-110 hover:shadow-red-300 transition duration-500 ease-in-out"
+>
+  <img
+    transition:name=`img-${img}`
+    class="size-fit rounded-t-xl"
+    alt="yolo"
+    src=`images/${img}`
+  />
+  <div class="p-3">
+    <h2 class="mb-2">{name}</h2>
+    <h3>{sm_description}</h3>
+  </div>
+</section>
