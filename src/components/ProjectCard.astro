@@ -8,6 +8,7 @@ interface Props {
   astro?: boolean;
   tailwind?: boolean;
   expo?: boolean;
+  reactNative?: boolean;
 }
 const { name, img, sm_description, react, astro, tailwind, expo } = Astro.props;
 ---
@@ -17,12 +18,12 @@ const { name, img, sm_description, react, astro, tailwind, expo } = Astro.props;
 >
   <img
     transition:name=`img-${img}`
-    class="size-fit rounded-t-xl"
+    class="size-fit w-[400px] rounded-t-xl"
     alt="yolo"
     src=`images/${img}`
   />
   <div class="p-3">
-    <h2 class="mb-2">{name}</h2>
+    <h2 class="mb-2 font-bold">{name}</h2>
     <h3>{sm_description}</h3>
   </div>
 </section>

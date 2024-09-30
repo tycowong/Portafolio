@@ -1,10 +1,7 @@
 ---
-import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ProjectHero from "../../components/ProjectHero.astro";
-import SectionContainer from "../../components/SectionContainer.astro";
-import ProjectInfo from "../../components/ProjectInfo.astro";
 import { render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -18,9 +15,11 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { data } = project;
-const { name, img, sm_description } = data;
+const { name, img, technologies } = data;
 
 const { Content } = await render(project);
+
+
 ---
 
 <Layout title=`${name}` description=`${name} Project`>
@@ -31,6 +30,11 @@ const { Content } = await render(project);
     <article class="prose prose-md pl-11 pr-11 mt-4">
       <h1>{name}</h1>
       <Content />
+      <ul class="list-none flex flex-row gap-3 p-0">
+        {technologies.map((tech: string) => {
+          return <li class="p-0">{tech}</li>
+        })}
+      </ul>
     </article>
   </section>
 </Layout>
