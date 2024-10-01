@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { data } = project;
-const { name, img, technologies } = data;
+const { name, img, alt, technologies } = data;
 
 const { Content } = await render(project);
 
@@ -26,7 +26,7 @@ const { Content } = await render(project);
   <section
     class="flex gap-5 w-full h-full flex-row justify-center flex-wrap mt-14"
   >
-    <ProjectHero img={img} alt="Yolo" />
+    <ProjectHero img={img} alt={alt} />
     <article class="prose prose-md pl-11 pr-11 mt-4">
       <h1>{name}</h1>
       <Content />

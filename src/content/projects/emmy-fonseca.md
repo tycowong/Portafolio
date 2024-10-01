@@ -1,6 +1,7 @@
 ---
 name: "Emmy Fonseca"
 img: "Emmy_Mua_Portafolio_Hero.jpg"
+alt: "Pictures of models on Emmy's website"
 sm_description: "This portafolio display the talented work of the Makeup Artist Emmy Fonseca"
 technologies: ['HTML', 'CSS']
 ---

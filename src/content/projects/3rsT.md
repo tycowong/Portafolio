@@ -1,6 +1,7 @@
 ---
 name: "3rsT"
 img: "3rsT_image.jpg"
+alt: "Components of a the thirsty app floating in a phone"
 sm_description: "Get a drink recommendation based on the current song you are lsitening in spotify."
 technologies: ["Expo", "React Native"]
 ---
