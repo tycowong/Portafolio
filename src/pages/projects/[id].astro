@@ -3,6 +3,12 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ProjectHero from "../../components/ProjectHero.astro";
 import { render } from "astro:content";
+import Expo from "../../icons/Expo.astro";
+import TailWind from "../../icons/TailWind.astro";
+import SocialPill from "../../icons/SocialPill.astro";
+import HTML from "../../icons/HTML.astro";
+import CSS from "../../icons/CSS.astro";
+import Spotify from "../../icons/Spotify.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -19,7 +25,31 @@ const { name, img, alt, technologies } = data;
 
 const { Content } = await render(project);
 
+const TAGS = {
+  Expo: {
+    name: "Expo",
+    icon: Expo,
+  },
+  Tailwind: {
+    name: "TailWind",
+    icon: TailWind,
+  },
+  HTML: {
+    name: "HTML",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    icon: CSS,
+  },
+  Spotify: {
+    name: "Spotify API",
+    icon: Spotify,
+  },
+};
 
+const tech = Object.values(TAGS);
+console.log(tech);
 ---
 
 <Layout title=`${name}` description=`${name} Project`>
@@ -31,9 +61,20 @@ const { Content } = await render(project);
       <h1>{name}</h1>
       <Content />
       <ul class="list-none flex flex-row gap-3 p-0">
-        {technologies.map((tech: string) => {
-          return <li class="p-0">{tech}</li>
-        })}
+        {
+          tech.map((tag) => {
+            if (technologies.includes(tag.name)) {
+              return (
+                <>
+                  <SocialPill>
+                    <tag.icon class="size-6" />
+                    {tag.name}
+                  </SocialPill>
+                </>
+              );
+            }
+          })
+        }
       </ul>
     </article>
   </section>
