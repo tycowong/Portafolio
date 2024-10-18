@@ -9,6 +9,8 @@ import SocialPill from "../../icons/SocialPill.astro";
 import HTML from "../../icons/HTML.astro";
 import CSS from "../../icons/CSS.astro";
 import Spotify from "../../icons/Spotify.astro";
+import AstroIcon from "../../icons/AstroIcon.astro";
+import Cloudinary from "../../icons/Cloudinary.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -46,10 +48,17 @@ const TAGS = {
     name: "Spotify API",
     icon: Spotify,
   },
+  Astro: {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  Cloudinary: {
+    name: "Cloudinary",
+    icon: Cloudinary,
+  },
 };
 
 const tech = Object.values(TAGS);
-console.log(tech);
 ---
 
 <Layout title=`${name}` description=`${name} Project`>
