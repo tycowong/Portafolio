@@ -14,11 +14,11 @@ const { name, img, sm_description, react, astro, tailwind, expo } = Astro.props;
 ---
 
 <section
-  class="flex shadow-gray-400 shadow-2xl flex-col w-[400px] h-[400px] bg-white rounded-xl hover:scale-110 hover:shadow-red-300 transition duration-500 ease-in-out"
+  class="flex shadow-gray-400 shadow-2xl flex-col w-80 md:w-[350px] md:max-h-fit bg-white rounded-xl hover:scale-110 hover:shadow-red-300 transition duration-500 ease-in-out"
 >
   <img
     transition:name=`img-${img}`
-    class="size-fit w-[400px] rounded-t-xl"
+    class="size-fit md:w-[400px] rounded-t-xl"
     alt="yolo"
     src=`images/${img}`
   />

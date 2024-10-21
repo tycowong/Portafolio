@@ -17,7 +17,14 @@ const { description, title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content=`${description}` />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
@@ -34,6 +41,7 @@ const { description, title } = Astro.props;
     color: #3c4043;
     font-size: medium;
   }
+
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
@@ -45,14 +53,13 @@ const { description, title } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     row-gap: 80px;
-    width: 100%;
   }
 
   body {
     background-color: #f3f7fe;
-    width: 100%;
   }
 
   h1 {
