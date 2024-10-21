@@ -16,21 +16,28 @@ import DocumentIcon from "../icons/DocumentIcon.astro";
 >
   <main>
     <SectionContainer
-      class="flex items-center flex-col justify-between mt-10 gap-y-10 md:flex-row"
+      class="flex items-center flex-col justify-between mt-10 gap-y-10 md:flex-row sm:p-0 p-5"
     >
       <Hero /></SectionContainer
     >
 
-    <SectionContainer id="career" class="flex-col justify-start gap-y-10">
+    <SectionContainer
+      id="career"
+      class="flex-col justify-start gap-y-10 p-5 sm:p-0"
+    >
       <div class="flex flex-row gap-x-3 justify-between items-center">
         <div class="flex flex-row items-center justify-start gap-x-3">
           <BriefCaseIcon class="size-10" />
           <h1 class="">Career</h1>
         </div>
-        <nav class="flex flex-row md:mr-11">
+        <nav class="flex flex-row md:mr-11 ml-5">
           <SocialPill
             href="https://docs.google.com/document/d/1O9P1Azw82MKqqrXMcaMWUasmLonc3Q6qTRIIsBkHu4c/export?format=pdf"
-            ><DocumentIcon class="size-6" />Download Resume</SocialPill
+            ><DocumentIcon class="size-6" /><h4
+              class="text-md sm:text-sm -pr-10"
+            >
+              Download Resume
+            </h4></SocialPill
           >
         </nav>
       </div>
