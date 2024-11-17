@@ -14,12 +14,13 @@ import DocumentIcon from "../icons/DocumentIcon.astro";
   description="Learn about the solutions I've made while working on diferent proyects I've contribuited."
   title="Portafolio de Roberto Wong - Developer and "
 >
-  <main>
+  <main class="pt-20">
     <SectionContainer
-      class="flex items-center flex-col justify-between mt-10 gap-y-10 md:flex-row sm:p-0 p-5"
+      id="hero"
+      class="items-center flex-col gap-12 sm:gap-10 justify-between mt-10 md:flex-row sm:p-0 p-5"
     >
-      <Hero /></SectionContainer
-    >
+      <Hero />
+    </SectionContainer>
 
     <SectionContainer
       id="career"
@@ -46,7 +47,8 @@ import DocumentIcon from "../icons/DocumentIcon.astro";
 
     <SectionContainer
       id="projects"
-      class="flex justify-center flex-col items-center"
+      class="flex justify-center flex-col items-center max-w-max"
+      customM="900"
     >
       <Projects />
     </SectionContainer>

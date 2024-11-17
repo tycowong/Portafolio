@@ -1,10 +1,21 @@
 ---
-const { id, class: className } = Astro.props;
+interface Props {
+  id: string;
+  class: string;
+  customM?: string;
+}
+
+let wid = "1000";
+const { id, class: className, customM } = Astro.props;
+
+if (customM) {
+  wid = customM;
+}
 ---
 
 <section
   id={id}
-  class=`sm:w-[600px] md:w-[700px] lg:w-[850px] max-w-max flex md:w-[1000px] pt-10 ${className}`
+  class=`w-full sm:max-w-[600px]  md:max-w-[800px] flex pt-10 ${className} mx-5 px-5`
 >
   <slot />
 </section>

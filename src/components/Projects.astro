@@ -6,7 +6,7 @@ const PROJECTS = await getCollection("projects");
 
 <h1>Projects</h1>
 <h2>What I've build so far</h2>
-<div class="flex flex-row flex-wrap m-10 align-center justify-center gap-8">
+<div class="flex flex-row flex-wrap m-5 align-center justify-center gap-5">
   {
     PROJECTS.map((project: { slug: any; data: any }) => {
       const { slug, data } = project;
