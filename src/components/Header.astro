@@ -42,7 +42,6 @@ import Cottage from "../icons/Cottage.astro";
       observer.observe(section);
     });
 
-    // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
         observer.disconnect();
