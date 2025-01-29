@@ -11,6 +11,7 @@ import CSS from "../../icons/CSS.astro";
 import Spotify from "../../icons/Spotify.astro";
 import AstroIcon from "../../icons/AstroIcon.astro";
 import Cloudinary from "../../icons/Cloudinary.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -62,29 +63,32 @@ const tech = Object.values(TAGS);
 ---
 
 <Layout title=`${name}` description=`${name} Project`>
-  <section
-    class="flex gap-5 w-full h-full flex-row justify-center flex-wrap mt-10 md:mt-14 mb-10"
-  >
-    <ProjectHero img={img} alt={alt} />
-    <article class="prose prose-md pl-11 pr-11 mt-4">
-      <h1>{name}</h1>
-      <Content />
-      <ul class="list-none flex flex-row gap-3 p-0">
-        {
-          tech.map((tag) => {
-            if (technologies.includes(tag.name)) {
-              return (
-                <>
-                  <SocialPill>
-                    <tag.icon class="size-6" />
-                    {tag.name}
-                  </SocialPill>
-                </>
-              );
-            }
-          })
-        }
-      </ul>
-    </article>
+  <section class="flex flex-col justify-center items-center">
+    <SectionContainer
+      id="project-page"
+      class="flex gap-5 w-full h-full justify-center flex-col mt-10 md:mt-14 mb-10"
+    >
+      <h1 class="flex justify-center p-5">{name}</h1>
+      <ProjectHero img={img} alt={alt} />
+      <article class="prose prose-md px-5 my-4 w-max">
+        <Content />
+        <ul class="list-none flex flex-row gap-3 p-0">
+          {
+            tech.map((tag) => {
+              if (technologies.includes(tag.name)) {
+                return (
+                  <>
+                    <SocialPill>
+                      <tag.icon class="size-6" />
+                      {tag.name}
+                    </SocialPill>
+                  </>
+                );
+              }
+            })
+          }
+        </ul>
+      </article>
+    </SectionContainer>
   </section>
 </Layout>
