@@ -4,6 +4,7 @@ img: "3rsT_image.jpg"
 alt: "Components of a the thirsty app floating in a phone"
 sm_description: "Get a drink recommendation based on the current song you are lsitening in spotify."
 technologies: ["Expo", "React Native", "Spotify API"]
+github_repo: "https://github.com/tycowong/3rsT"
 ---
 
 This app was created unsing **Expo, Google Gemini, and Spotify API**. By taking the current track a user is currently listening in Spotify, we make a query to Gemini that will **return a recomendation of a alcoholic drink that would pair good with the song**.

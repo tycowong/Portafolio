@@ -6,7 +6,9 @@ const projects = defineCollection({
         img: z.string(),
         alt: z.string(),
         sm_description: z.string(),
-        technologies: z.array(z.string())
+        technologies: z.array(z.string()),
+        source: z.string().optional(),
+        github_repo: z.string().optional()
     })
 })
 
