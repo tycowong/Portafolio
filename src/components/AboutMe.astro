@@ -1,0 +1,18 @@
+---
+import Image from "astro/components/Image.astro";
+import aboutMeImage from "../../public/images/about_me_img.png"
+--- 
+<h1 class="pl-3">About Me </h1>
+<article class="flex flex-col items-center md:flex-row gap-10 mt-5">
+<Image src={aboutMeImage} class="-rotate-6 w-80 h-80" alt="Roberto Wong Portrait picture with a forest background"/>
+   <p>
+    My name is Roberto Wong, I have <strong>5 years of experience in IT and 2 in Development</strong>. I believe in automation 
+    and the reduction of time in repetitive tasks. I currently develop scripts using <strong>Python and Selenium</strong> for UX Researchers at HP
+    to migrate their research repository from one platform to another.<br><br>
+
+    I've also automated research operations processes using <strong>Microsoft Power Automate and HTTP requests</strong> that reduced user friction 
+    and time of hiring test users from <strong>weeks to 2 hours</strong>. This automation included sending emails, confirming user participation, using platforms like UserTesting.com 
+    to schedule interviews, sending payment, etc.
+   </p>
+  
+</article>

@@ -8,6 +8,7 @@ import Experience from "../components/Experience.astro";
 import BriefCaseIcon from "../icons/BriefCaseIcon.astro";
 import SocialPill from "../icons/SocialPill.astro";
 import DocumentIcon from "../icons/DocumentIcon.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
@@ -53,6 +54,13 @@ import DocumentIcon from "../icons/DocumentIcon.astro";
     >
       <Projects />
     </SectionContainer>
+
+    <SectionContainer
+    id="aboutme"
+    class="flex flex-col md:px-0 gap-5 items-center md:items-start" >
+      <AboutMe/>
+    </SectionContainer>
+
     <Footer />
   </main>
 </Layout>
